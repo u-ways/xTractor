@@ -13,6 +13,7 @@ It will also generate the following files:
 ./xTractor/app/build/reports/{LOG_FILE_NAME}-report.md
 ./xTractor/app/build/reports/{LOG_FILE_NAME}-logs-data.csv
 ./xTractor/app/build/reports/{LOG_FILE_NAME}-users-overview-data.csv
+./xTractor/app/build/reports/{LOG_FILE_NAME}-users-x-logs-data.csv
 ```
 
 ## Special flags:

@@ -44,6 +44,15 @@ class UsersReporter(
             }
             .writeToFile("${source.nameWithoutExtension}-users-overview-data.csv")
 
+        users
+            .sortedBy { it.name }
+            .joinToString("\n", "name,date,time,log\n") { user ->
+                user.logs
+                    .sortedByDescending(Log::date)
+                    .joinToString("\n") { "${it.sender},${it.date},${it.time},\"${it.message}\"" }
+            }
+            .writeToFile("${source.nameWithoutExtension}-users-x-logs-data.csv")
+
         return """
             |### Stats
             |  - Total Xs sent: ${users.map(User::logs).map(List<Log>::size).reduce(Int::plus)}
