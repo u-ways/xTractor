@@ -1,4 +1,4 @@
-rootProject.name = "xtractor"
+rootProject.name = "xTractor"
 
 include(
     "app"

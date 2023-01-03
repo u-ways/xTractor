@@ -1,0 +1,5 @@
+NOTE:
+  If we ever switch to telegram, we can easily tailor our existing work
+  to support this with the current design and architecture.
+
+ ___

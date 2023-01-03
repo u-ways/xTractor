@@ -5,6 +5,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     `java-library`
     alias(libs.plugins.jetbrains.kotlin.jvm)
+    application
 }
 
 allprojects {
@@ -21,6 +22,10 @@ dependencies {
     testImplementation(rootProject.libs.kotest.assertions.core)
     testImplementation(rootProject.libs.kotest.runner.junit5)
 
+}
+
+application {
+    mainClass.set("io.github.xtractor.Launcher")
 }
 
 tasks {
