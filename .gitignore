@@ -1,0 +1,5 @@
+.gradle
+.idea
+build
+notes.md
+*.log
