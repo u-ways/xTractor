@@ -11,8 +11,7 @@ import io.github.xtractor.core.scrub.UserScrubber.REMOVE_LOG_MESSAGES_WITHOUT_AN
 import io.github.xtractor.core.scrub.UserScrubber.REMOVE_USERS_WITHOUT_AN_X
 import io.github.xtractor.domain.whatsapp.extractor.WhatsAppLogsExtractorStrategy
 import io.github.xtractor.domain.whatsapp.extractor.WhatsAppUsersExtractorStrategy
-import io.github.xtractor.domain.whatsapp.scruber.DO_NOT_RATE_LIMIT_USERS_WHO_SEND_LOTS_OF_X_PICTURES
-import io.github.xtractor.domain.whatsapp.scruber.RATE_LIMIT_MEDIA_OMITTED_POINTS
+import io.github.xtractor.domain.whatsapp.scruber.DAILY_RATE_LIMITER_CAP
 import io.github.xtractor.domain.whatsapp.scruber.REPLACE_MEDIA_OMITTED_WITH_AN_X
 import java.io.File
 
@@ -34,8 +33,7 @@ object Launcher {
         REMOVE_INACTIVE_USER,
         REMOVE_LOG_MESSAGES_WITHOUT_AN_X,
         REMOVE_USERS_WITHOUT_AN_X,
-        DO_NOT_RATE_LIMIT_USERS_WHO_SEND_LOTS_OF_X_PICTURES(mediaPowerUsers),
-        RATE_LIMIT_MEDIA_OMITTED_POINTS,
+        DAILY_RATE_LIMITER_CAP,
     )
 
     private val LOGS_REPORTER = LogsReporter(
