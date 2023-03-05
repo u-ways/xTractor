@@ -6,7 +6,6 @@ import io.github.xtractor.core.reporter.LogsReporter
 import io.github.xtractor.core.reporter.UsersReporter
 import io.github.xtractor.core.scrub.LogScrubber.REMOVE_EMPTY_MESSAGES
 import io.github.xtractor.core.scrub.Scrubber
-import io.github.xtractor.core.scrub.UserScrubber.REMOVE_INACTIVE_USER
 import io.github.xtractor.core.scrub.UserScrubber.REMOVE_LOG_MESSAGES_WITHOUT_AN_X
 import io.github.xtractor.core.scrub.UserScrubber.REMOVE_USERS_WITHOUT_AN_X
 import io.github.xtractor.domain.whatsapp.extractor.WhatsAppLogsExtractorStrategy
@@ -30,7 +29,6 @@ object Launcher {
 
     // User scrubbers applied based on order
     private val WORKOUT_USER_SCRUBBERS: List<Scrubber<User>> = listOf(
-        REMOVE_INACTIVE_USER,
         REMOVE_LOG_MESSAGES_WITHOUT_AN_X,
         REMOVE_USERS_WITHOUT_AN_X,
         DAILY_RATE_LIMITER_CAP,
